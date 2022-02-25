@@ -1,3 +1,4 @@
+//----------------
 package backend;
 
 import java.sql.*;
@@ -9,7 +10,6 @@ import java.util.logging.Logger;
 public class SQL_Functions {
 
     static int tran_id = 1;
-
 
     public static void purchase(int account_num_d , int account_num_cus , double agora) throws SQLException, ClassNotFoundException {
         Civilian civ = new Civilian();
@@ -81,7 +81,6 @@ public class SQL_Functions {
             insQuery2.append("UPDATE dealers ");
             insQuery2.append(" SET earnings = ").append(deal.getEarnings());
             insQuery2.append(" WHERE account_no = ").append(account_num_d);
-
 
 
             preparedStmt = con.prepareStatement(insQuery.toString());
